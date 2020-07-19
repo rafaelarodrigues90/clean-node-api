@@ -1,20 +1,11 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2020": true,
-        "node": true
-    },
-    "extends": [
-        "standard"
-    ],
-    "parser": "@typescript-eslint/parser",
+    "extends": "standard-with-typescript",
     "parserOptions": {
-        "ecmaVersion": 11
+        "project": "./tsconfig.json"
     },
-    "plugins": [
-        "@typescript-eslint"
-    ],
     "rules": {
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/method-signature-style": "off",
+        "@typescript-eslint/return-await": "off"
     }
 }

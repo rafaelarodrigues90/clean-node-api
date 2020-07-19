@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import { SignUpController } from './signup'
 import { MissingParamError, InvalidParamError, ServerError } from '../errors'
 import { EmailValidator } from '../protocols/email-validator'
@@ -11,7 +9,7 @@ interface SutTypes {
 
 const makeSut = (): SutTypes => {
   class EmailValidatorStub implements EmailValidator {
-    isValid (email:string): boolean {
+    isValid (email: string): boolean {
       return true
     }
   }
@@ -115,7 +113,7 @@ describe('SignUp Controller', () => {
 
   test('should return 500 if an EmailValidator throws', () => {
     class EmailValidatorStub implements EmailValidator {
-      isValid (email:string): boolean {
+      isValid (email: string): boolean {
         throw new Error()
       }
     }
